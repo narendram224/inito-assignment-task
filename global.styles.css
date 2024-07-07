@@ -1014,6 +1014,12 @@ main {
   display: none;
 }
 
+.question-cicle{
+  position: absolute;
+  right: 71px;
+    top: -33px;
+}
+
 @media (min-width: 840px) {
   .menu {
     width: auto;
@@ -1090,11 +1096,13 @@ main {
   }
   .inito-accordion-title{
     max-width: 558px;
+    position: relative;
   }
   .inito-accordion-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0.8rem 2em;
+    align-items: baseline;
   }
   .accordion-item {
     margin: 0rem;
@@ -1284,8 +1292,12 @@ gap: 1rem;
   align-items: center;
   max-width: 600px;
   margin: 2rem auto;
+  position: relative;
 
 }
+
+
+
 .bg-sky h3{
   font-size: 1.6rem;
   line-height: 3rem;

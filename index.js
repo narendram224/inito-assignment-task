@@ -7,24 +7,6 @@ import { hideElementIfSmallScreen } from './src/helper/index.js';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  // initializeHeader();
-  // renderMainContent();
-  // initializeFooter();
-
-//   let lastScrollpos = window.pageYOffset;
-// let menuButtonCheck = document.querySelector(".menu-btn");
-// window.onscroll = function() {
-// 	let currentScrollPos = window.pageYOffset;
-// 	if (lastScrollpos > currentScrollPos) {
-//     debugger;
-// 		document.getElementById("top-nav").style.top = "200px";
-// 	} else {
-//     debugger
-// 		document.getElementById("top-nav").style.top = "200px";
-// 	}
-// 	lastScrollpos = currentScrollPos;
-// 	menuButtonCheck.checked = false;
-// } 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -38,6 +20,7 @@ const sliderElement = document.querySelector('#testimonial-slider');
 observer.observe(sliderElement);
 
 new Accordion('#accordion');
+new TestimonialSlider('#my-slider');
 
 hideElementIfSmallScreen('.inito-lab-text',720);
 });
