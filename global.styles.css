@@ -151,7 +151,6 @@ main {
 /* Custom styles */
 
 .inito-header {
-  background-color: var(--white-color);
   color: white;
   padding: 1rem 0;
   display: flex;
@@ -162,6 +161,7 @@ main {
 .inito-header {
   width: 100%;
   height: 60px;
+  background: var(--white-color);
 }
 .inito-logo {
   width: 100px;
@@ -186,6 +186,7 @@ main {
   line-height: 1rem;
   letter-spacing: 0.5px;
   text-align: center;
+  z-index: 1;
 }
 
 .btn-primary {
@@ -230,9 +231,10 @@ main {
 /* Media queries */
 
 .try-now-btn {
-  position: absolute;
-  right: 10%;
-  top: 20px;
+  position: fixed;
+  right: 9%;
+    top: 18px;
+    z-index: 2;
 }
 
 .top-nav {
@@ -246,6 +248,7 @@ main {
   background-color: var(--white-color);
   top: 0;
   gap: 1rem;
+  z-index: 2;
 }
 
 .menu {
@@ -333,12 +336,15 @@ main {
 }
 
 .inito-hero {
-  background-color: var(--light-primary-color);
   text-align: left;
   padding: 2.44rem;
   position: relative;
   min-height: 548px;
   overflow: hidden;
+  background-image: url('./public/assets/icons/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
 }
 
 .inito-hero .inito-star {
@@ -404,6 +410,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   justify-items: center;
+
 }
 
 .inito-brands .inito-brands-heading {
@@ -498,6 +505,7 @@ main {
   padding-bottom: 11rem;
 }
 
+
 .inito-never-miss-tick-container {
   display: grid;
   grid-template-columns: 20px 1fr;
@@ -512,9 +520,10 @@ main {
   max-width: 20px;
 }
 
-.inito-never-miss .inito-never-miss-banner {
+ .inito-never-miss-banner {
   width: 100%;
-  max-width: 572px;
+  max-width: 272px;
+  border-radius: 2rem;
 }
 /* never miss styles ends */
 
@@ -1013,6 +1022,7 @@ main {
 
     gap: 4rem;
     align-items: center;
+    margin-right: 1.5rem;
   }
   .menu-icon {
     display: none;
@@ -1020,8 +1030,21 @@ main {
   .top-nav {
     justify-content: space-evenly;
     align-items: center;
-    padding: 10px 0px 0px;
+    padding: 10px 0px 8px;
   }
+}
+
+.inito-card-title{
+  display: none;
+}
+
+.inito-card-image{
+  display: none;
+}
+
+.inito-iphone-hero{
+  display: none;
+  z-index: 0;
 }
 
 
@@ -1043,7 +1066,7 @@ main {
   }
 
   .try-now-btn {
-    top: 12px;
+    top: 8px;
   }
 
   /* footer */
@@ -1112,6 +1135,7 @@ main {
   line-height: 20px;
   letter-spacing: 0.5px;
   padding: 0.6rem 1.25rem;
+  z-index: 2;
 }
 .lab-btn {
   padding: 0.9rem 1.5rem;
@@ -1184,8 +1208,23 @@ main {
 .inito-adapts{
   flex-direction: row;
   background-color: var(--white-color);
-  padding-top: 2rem;
+  padding-top: 0rem;
+gap: 1rem;
   border-radius: 20px;
+  justify-content: space-between;
+  
+}
+.inito-adapts-content-container{
+  max-width: 430px;
+  width: 100%;
+  padding: 0px 0rem 0rem 2rem;
+  margin: -4px;
+}
+.inito-adapts-image-container{
+  width: 430px;
+  padding: 0;
+  margin: -4px;
+
 }
 
 .inito-adapts-image{
@@ -1193,6 +1232,136 @@ main {
   max-width: 460px;
   border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+.inito-adapts p{
+  margin: 0;
+  padding: 0;
+}
+
+.inito-card-title{
+  display: block;
+  font-size: 1rem;
+  line-height: 3rem;
+  color: var(--black-color);
+  text-align: center;
+  width: 100%;
+  margin-top: 14rem;
+}
+
+.inito-card-image{
+  float: right;
+        display: block;
+        position: absolute;
+        right: -8px;
+        top: -14px;
+        width: 60px;
+}
+.inito-never-miss{
+  flex-direction: row;
+ 
+}
+
+.inito-never-miss-banner {
+  width: 100%;
+  max-width: 346px;
+}
+
+.inito-predict{
+  flex-direction: row-reverse;
+  margin-bottom: 0rem;
+  
+}
+.inito-never-miss{
+  background-color: var(--bg-primary-color);
+  margin-top: 0rem !important;
+}
+.inito-description-trusted{
+  display: none;
+}
+.bg-sky{
+  background-color: var(--white-color);
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 2rem auto;
+
+}
+.bg-sky h3{
+  font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.inito-brands{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -7rem;
+  position: relative;
+}
+.inito-brands .inito-brands-heading{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0px;
+}
+.inito-hero-device{
+  display: none;
+
+}
+.inito-hero-iphone{
+  display: none;
+}
+
+.inito-iphone-hero{
+  display: inline;
+        width: 48%;
+        position: absolute;
+        right: 40px;
+        z-index: 3;
+        bottom: 80px;
+        z-index:0 ;
+
+}
+
+.inito-hero{
+  min-height: 64vw;
+  background-position-y: 2vw;
+  background-position-y: -15vw;
+
+}
+
+.inito-star{
+  padding-top: 5rem;
+  margin-left: 3rem;
+}
+.inito-hero-content{
+  max-width: 400px;
+  margin-left: 3rem;
+  display: flex;
+  gap: 0rem;
+  flex-direction: column;
+}
+.inito-hero .inito-hero-heading{
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+.inito-hero .inito-hero-paragraph{
+  font-size: 0.9rem;
+  line-height: 1.25rem;
+}
+
+.inito-hero .inito-hero-btn{
+  left: 200px;
+  top: 380px;
+  bottom: 0px;
+  height: 45px;
+  width: 250px;
+}
+.inito-hero .inito-hero-mark1{
+  display: none;
+}
+
 }
 
 @media screen and (min-width: 1024px) {
@@ -1217,6 +1386,56 @@ main {
     font-size: 2rem;
     line-height: 3rem;
   }
+  .inito-never-miss-banner {
+    width: 100%;
+    max-width: 546px;
+  }
+  .inito-predict{
+    margin-bottom: 0;
+  }
+  .bg-sky{
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 2rem auto;
+  
+  }
+  .bg-sky h3{
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+ 
+  .inito-iphone-hero{
+    bottom: 120px;
+}
+
+.inito-brands {
+  margin-top: -9rem;
+
+}
+
+.inito-hero-content{
+  max-width: 580px;
+}
+
+.inito-hero .inito-hero-heading{
+  font-size: 2.25rem;
+  line-height: 3.6rem;
+}
+.inito-hero .inito-hero-paragraph{
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+
+
+/* .inito-adapts-image-container{
+  width: 510px;
+  padding: 0px;
+  margin: -4px 2px;
+
+} */
 }
 
 
@@ -1242,6 +1461,62 @@ main {
     font-size: 2.25rem;
     line-height: 3rem;
   }
+
+  .inito-adapts-image-container{
+    width: 430px;
+    padding: 0;
+    margin: -4px;
+  
+  }
+  
+  .inito-adapts-image{
+    width: 100%;
+    max-width: 460px;
+    border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+  .inito-never-miss-banner {
+    width: 100%;
+    max-width: 646px;
+  }
+  .inito-predict{
+    margin-bottom: 0;
+  }
+  .bg-sky{
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    max-width: 720px;
+    margin: 2rem auto;
+  
+  }
+  .bg-sky h3{
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  .inito-iphone-hero{
+    bottom: 150px;
+}
+.inito-brands {
+  margin-top: -14rem;
+
+}
+.inito-hero-content{
+  max-width: 680px;
 }
 
+.inito-hero .inito-hero-heading{
+  font-size: 3rem;
+  line-height: 4rem;
+}
+.inito-hero .inito-hero-paragraph{
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+.inito-hero .inito-hero-btn{
+  
+  top: 440px;
+  
+}
+}
 
